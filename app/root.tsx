@@ -48,7 +48,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <footer>
           <h2>Links</h2>
           <ul>
-            <li><a href="https://remix.run/docs/en/main/future/spa-mode" target="_blank" rel="noreferrer">Remix SPA Mode</a></li>
+            <li><a href="https://remix.run/docs/en/main/future/spa-mode" target="_blank" rel="noreferrer">Remix Docs: SPA Mode</a></li>
+            <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages#deploying-github-pages-artifacts" target="_blank" rel="noreferrer">GitHub Docs: Pages Deployment</a></li>
             <li><a href="https://youtu.be/EO_-KwSslWQ" target="_blank" rel="noreferrer">Brooks Lybrand: Video Walkthrough</a></li>
             <li><a href="https://github.com/brookslybrand/remix-gh-pages" target="_blank" rel="noreferrer">Brooks Lybrand: Demo Repo</a></li>
           </ul>
