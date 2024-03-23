@@ -1,33 +1,68 @@
 import {
+  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "@remix-run/react"
+
+import type { LinksFunction, MetaFunction } from "@remix-run/node"
+
+export const meta: MetaFunction = () => {
+  return [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { title: "Remix SPA - GitHub Actions Deploy" },
+    { name: "description", content: "Deploying a SPA configured Remix application using GitHub actions!" },
+  ]
+}
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: "icon", href: "favicon.ico" },
+  ]
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
       <body>
-        {children}
+        <header>
+          <h1>Remix SPA Deployment</h1>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/other">Other</Link></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <h2>Links</h2>
+          <ul>
+            <li><a href="https://remix.run/docs/en/main/future/spa-mode" target="_blank" rel="noreferrer">Remix SPA Mode</a></li>
+            <li><a href="https://youtu.be/EO_-KwSslWQ" target="_blank" rel="noreferrer">Video Walkthrough</a></li>
+          </ul>
+        </footer>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet />
 }
 
 export function HydrateFallback() {
-  return <p>Loading...</p>;
+  return <p>Loading...</p>
 }
