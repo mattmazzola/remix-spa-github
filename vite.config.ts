@@ -5,10 +5,10 @@ import { copyFileSync } from "node:fs"
 import { join } from "node:path"
 
 export default defineConfig({
-  base: "/remix-spa-github",
+  base: "/remix-spa-github/",
   plugins: [
     remix({
-      basename: "/remix-spa-github",
+      basename: "/remix-spa-github/",
       ssr: false,
       buildEnd(args) {
         if (!args.viteConfig.isProduction) return
