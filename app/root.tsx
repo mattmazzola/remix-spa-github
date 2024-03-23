@@ -49,7 +49,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <h2>Links</h2>
           <ul>
             <li><a href="https://remix.run/docs/en/main/future/spa-mode" target="_blank" rel="noreferrer">Remix SPA Mode</a></li>
-            <li><a href="https://youtu.be/EO_-KwSslWQ" target="_blank" rel="noreferrer">Video Walkthrough</a></li>
+            <li><a href="https://youtu.be/EO_-KwSslWQ" target="_blank" rel="noreferrer">Brooks Lybrand: Video Walkthrough</a></li>
+            <li><a href="https://github.com/brookslybrand/remix-gh-pages" target="_blank" rel="noreferrer">Brooks Lybrand: Demo Repo</a></li>
           </ul>
         </footer>
         <ScrollRestoration />
